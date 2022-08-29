@@ -26,8 +26,13 @@
         <a href="">
           <img src="/images/logo.svg" alt="Manage" srcset="" />
         </a>
-        <nav class="primary-navigation">
-          <ul aria-label="primary" role="list" class="nav-list">
+        <button class="mobile-nav-toggle" aria-controls="primary-navigation">
+          <img class="icon-hamburger" src="./images/icon-hamburger.svg" alt="" aria-hidden="true">
+          <img class="icon-close" src="./images/icon-close.svg" alt="" aria-hidden="true">
+          <span class="visually-hidden">menu</span>
+        </button>
+        <nav class="primary-navigation" >
+          <ul aria-label="primary" role="list" class="nav-list" id="primary-navigation">
             <li><a href="#">Pricing</a></li>
             <li><a href="#">Product</a></li>
             <li><a href="#">About us</a></li>
@@ -109,7 +114,7 @@
           </div>
         </div>
       </section>
-      <section class="carousel | padding-block-700" >
+      <section class="carousel | padding-block-700">
         <h2 class="fs-secondary-heading fw-bold">What they've said</h2>
         <!-- carousel section -->
         <button class="button">Get Started</button>
@@ -118,7 +123,9 @@
         <div class="container">
           <div class="even-columns">
             <div>
-              <p class="fs-secondary-heading fw-bold">Simplify how your team works today.</p>
+              <p class="fs-secondary-heading fw-bold">
+                Simplify how your team works today.
+              </p>
             </div>
             <div>
               <button class="button" data-type="inverted">Get Started</button>
@@ -127,7 +134,7 @@
         </div>
       </section>
     </main>
-    <footer class=" padding-block-700  bg-neutral-900 text-neutral-100">
+    <footer class="padding-block-700 bg-neutral-900 text-neutral-100">
       <div class="container">
         <div class="even-columns">
           <div>
