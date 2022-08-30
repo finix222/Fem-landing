@@ -260,14 +260,24 @@ body{
 .mobile-nav-toggle{
   display: none;
 }
+.primary-navigation{
+  font-size: var(--size-400);
+}
 
 @media (max-width: 50em) {
   .primary-navigation{
     display: none;
+    position: fixed ;
+    inset: 7rem var(--size-400);
+    text-align: center;
+    font-weight: ;
+  }
+  .nav-list{
+    
   }
   .primary-navigation[data-visible]{
     display:block;
-    position: fixed ;
+    
 
   }
   .mobile-nav-toggle{
