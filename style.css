@@ -192,6 +192,17 @@ svg {
   display: grid;
   gap: 1rem;
 }
+.visually-hidden{
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
 @media (min-width: 50em) {
   .even-columns{
     grid-auto-flow: column;
@@ -233,4 +244,35 @@ body{
 .button[data-type="inverted"]:focus-visible{
   background-color: var(--clr-accent-100);
   color: var(--clr-accent-300);
+}
+
+/* navigation */
+
+.nav-wrapper{
+  display: flex;
+ align-items: center;
+ justify-content: space-between;
+}
+
+.primary-header{
+  margin-top: var(--size-700);
+}
+.mobile-nav-toggle{
+  display: none;
+}
+
+@media (max-width: 50em) {
+  .primary-navigation{
+    display: none;
+  }
+  .mobile-nav-toggle{
+ 
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    padding: 0.5em;
+  }
+  .icon-close{
+    display: none;
+  }
 }
