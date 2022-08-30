@@ -265,8 +265,13 @@ body{
   .primary-navigation{
     display: none;
   }
+  .primary-navigation[data-visible]{
+    display:block;
+    position: fixed ;
+
+  }
   .mobile-nav-toggle{
- 
+    display: block;
     cursor: pointer;
     border: none;
     background: transparent;
@@ -275,4 +280,5 @@ body{
   .icon-close{
     display: none;
   }
+
 }
