@@ -121,6 +121,10 @@ svg {
   width: min(var(--max-width), 100% - (var(--padding) * 2));
   margin-inline: auto;
 }
+/* .flow * + *  */
+:where(.flow :not(:first-child)){
+  margin-top: var(--flow-spacer, 3em);
+}
 .even-columns{ 
   display: grid;
   gap: 1rem;
@@ -152,6 +156,13 @@ body{
   font-size: var(--fs-body);
   font-family: var(--ff-body);
   color: var(--clr-primary-400);
+}
+p:not([class]){
+  opacity: .7;
+  max-width: 32ch;
+}
+p[data-width="wide"] {
+  max-width: 42ch;
 }
 .button{
   cursor: pointer;
@@ -198,8 +209,22 @@ body{
 }
 .nav-list{
   font-size: var(--fs-nav);
+ 
 }
-
+.nav-list{
+  display: flex;
+  gap: clamp(var(--size-500), 5vw, var(--size-900));
+  /* gap: var(--size-400); */
+  font-weight: var(--fw-semi-bold);
+}
+.nav-list a{
+  text-decoration: none;
+  color: var(--clr-primary-400);
+}
+.nav-list a:hover,
+.nav-list a:focus{
+  color: var(--clr-accent-400);
+}
 @media (max-width: 50em) {
   .primary-navigation{
     display: none;
@@ -227,14 +252,7 @@ body{
     text-align: center;
     font-weight: var(--fw-bold);
   }
-  .nav-list a{
-    text-decoration: none;
-    color: var(--clr-primary-400);
-  }
-  .nav-list a:hover,
-  .nav-list a:focus{
-    color: var(--clr-accent-400);
-  }
+  
   .primary-navigation[data-visible]{
     display:block;
   }
